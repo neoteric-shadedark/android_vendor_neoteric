@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     debug.graphics.game_default_frame_rate.disabled=true
 
+# Gestures
+PRODUCT_PACKAGES += \
+    vendor.aospa.power-service
+
 # Google - GMS
 $(call inherit-product, vendor/gms/products/gms.mk)
 
@@ -204,6 +208,9 @@ endif
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor
+
+# SEPolicy
+$(call inherit-product, vendor/neoteric/sepolicy/sepolicy.mk)
 
 # StrictMode
 ifneq ($(TARGET_BUILD_VARIANT),eng)

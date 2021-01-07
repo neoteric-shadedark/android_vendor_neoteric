@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+//
+
+aidl_interface {
+    name: "vendor.aospa.power",
+    vendor_available: true,
+    srcs: [
+        "vendor/aospa/power/*.aidl",
+    ],
+    stability: "vintf",
+    backend: {
+        java: {
+            enabled: false,
+        },
+    },
+    versions: ["1"],
+}
