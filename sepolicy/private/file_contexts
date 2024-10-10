@@ -1,0 +1,2 @@
+# FS
+/system/bin/fsck\.ntfs                  u:object_r:fsck_exec:s0
