@@ -6,7 +6,7 @@ NEOTERIC_FASTBOOT_PACKAGE := $(PRODUCT_OUT)/$(NEOTERIC_TARGET)-fastboot.zip
 
 $(NEOTERIC_OTA_PACKAGE): $(BUILT_TARGET_FILES_PACKAGE) $(OTA_FROM_TARGET_FILES)
 	$(call build-ota-package-target,$@, --output_metadata_path $(INTERNAL_OTA_METADATA))
-ifneq ($(IS_OFFICIAL),false)
+ifneq ($(IS_CUSTOM),false)
 	$(hide) ./vendor/neoteric/tools/generate_json_build_info.sh $(NEOTERIC_OTA_PACKAGE)
 endif
 

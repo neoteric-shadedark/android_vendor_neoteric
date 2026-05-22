@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     NTPServerOverlay \
     CaptiveServerOverlay
 
-ifneq ($(IS_OFFICIAL), false)
+ifneq ($(IS_CUSTOM), false)
 PRODUCT_PACKAGES += \
     NeotericUpdatesOverlay
 endif

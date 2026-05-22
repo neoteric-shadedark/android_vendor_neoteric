@@ -138,8 +138,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 $(call inherit-product, vendor/neoteric/overlay/overlays.mk)
 
 # OTA
-IS_OFFICIAL ?= false
-ifneq ($(IS_OFFICIAL), false)
+IS_CUSTOM ?= false
+ifneq ($(IS_CUSTOM), false)
 PRODUCT_COPY_FILES += \
     vendor/neoteric/target/init/neoteric-updates.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/neoteric-updates.rc \
     vendor/neoteric/target/init/clean_cache.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/clean_cache.sh
@@ -268,7 +268,7 @@ PRODUCT_PACKAGES += \
     ThemePicker
 
 # Updates
-ifneq ($(IS_OFFICIAL), false)
+ifneq ($(IS_CUSTOM), false)
 PRODUCT_PACKAGES += \
     Updates
 endif
