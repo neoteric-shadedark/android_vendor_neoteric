@@ -39,6 +39,9 @@ endif
 # Inherit art options
 include vendor/neoteric/target/product/art.mk
 
+# BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # Boot Animation
 $(call inherit-product, vendor/neoteric/bootanimation/bootanimation.mk)
 
