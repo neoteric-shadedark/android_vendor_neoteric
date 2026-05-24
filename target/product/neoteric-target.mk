@@ -79,6 +79,9 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# GameBar
+$(call inherit-product, packages/apps/GameBar/gamebar.mk)
+
 # GameSpace
 PRODUCT_PACKAGES += \
     GameSpace
